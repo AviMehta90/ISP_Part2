@@ -1,5 +1,5 @@
+import datetime
 import psycopg2
-from psycopg2 import sql
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 def create_database(dbname):
@@ -60,6 +60,20 @@ def perform_fragmentation(conn):
         cursor.execute(create_table_query)
 
     conn.commit()
+    conn.close()
+
+def replication(dbname):
+    timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    copy_dbname = f"{dbname}_backup_{timestamp}"
+
+    conn_string = "host='localhost' dbname='postgres' user='postgres' password='12345678'"
+    conn = psycopg2.connect(conn_string)
+    conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
+    cursor = conn.cursor()
+    sql_create_copy = f"CREATE DATABASE {copy_dbname} TEMPLATE {dbname};"
+    cursor.execute(sql_create_copy)
+    print(f"Database copy '{copy_dbname}' has been created successfully!")
+    conn.close()
 
 if __name__ == '__main__':
     dbname = "supply_chain"
@@ -69,7 +83,7 @@ if __name__ == '__main__':
     execute_schema_script(conn, schema_file_path)
     insert_data_file_path = "insert_data.sql"
     execute_insert_script(conn, insert_data_file_path)
-
     perform_fragmentation(conn)
+    replication(dbname)
 
     conn.close()
