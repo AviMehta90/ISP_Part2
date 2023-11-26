@@ -1,6 +1,6 @@
 # ISP_Part2
 
-This repository contains a collection of SQL scripts and Python scripts designed for managing a supply chain database. The project illustrates the process of creating and manipulating a database for supply chain management, including tasks such as database creation, schema execution, data insertion, fragmentation, and replication. It's structured to be easily understood and executed, making it ideal for educational purposes or as a base for more complex projects.
+This folder contains a collection of SQL scripts and Python scripts designed for managing a supply chain database. The project illustrates the process of creating and manipulating a database for supply chain management, including tasks such as database creation, schema execution, data insertion, fragmentation, and replication. It's structured to be easily understood and executed, making it ideal for educational purposes or as a base for more complex projects.
 
 ## Contents
 
