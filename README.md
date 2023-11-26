@@ -104,7 +104,7 @@ The replication process is scripted in Python, where a new database copy is crea
 ![Python Script Output](Screenshots/1-python-script.png)
 
 ### PostgreSQL Connection
-![PostgreSQL Connection](Screenshots/2-postgres-connection.png)
+![PostgreSQL Connection](Screenshots/2-postgres_connection.png)
 
 ### Schema Execution and Fragmentation
 ![Fragmentation](Screenshots/3-display_fragmentation_and_tables.png)
@@ -119,4 +119,4 @@ The replication process is scripted in Python, where a new database copy is crea
 ![Replicated Database](Screenshots/6-using_backup_database.png)
 
 ### Replicated Tables
-![Replicated Tables](Screenshots/7-display_backup_database.png)
+![Replicated Tables](Screenshots/7-display_backup_database_contents.png)
