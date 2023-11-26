@@ -93,3 +93,30 @@ Fragmentation is implemented in the Python script where specific SQL queries are
 ### Usage
 
 The replication process is scripted in Python, where a new database copy is created using the current database as a template. This process is timestamped to maintain version control.
+
+
+## Schema and Output Screenshots
+
+### Database Schema
+![Database Schema](Screenshots/ERD_ISC.png)
+
+### Python Script
+![Python Script Output](Screenshots/1-python-script.png)
+
+### PostgreSQL Connection
+![PostgreSQL Connection](Screenshots/2-postgres-connection.png)
+
+### Schema Execution and Fragmentation
+![Fragmentation](Screenshots/3-display_fragmentation_and_tables.png)
+
+### Fragmentation Tables
+![Fragmentation Tables](Screenshots/4-display_fragmentation_and_tables1.png)
+
+### Replication and Backup
+![Replication and Backup](Screenshots/5-database_backups.png)
+
+### Replicated Database
+![Replicated Database](Screenshots/6-using_backup_database.png)
+
+### Replicated Tables
+![Replicated Tables](Screenshots/7-display_backup_database.png)
