@@ -38,8 +38,8 @@ def execute_insert_script(conn, script_path):
 def perform_fragmentation(conn):
     
     cursor = conn.cursor()
-    product_categories = ['Category1', 'Category2', 'Category3']
-    warehouse_locations = ['Location1', 'Location2']
+    product_categories = ['Electronics', 'Clothing and Fashion', 'Books']
+    warehouse_locations = ['Tech City', 'Fashion District']
 
     for category in product_categories:
         table_name = f'Products_{category.replace(" ", "_")}'
